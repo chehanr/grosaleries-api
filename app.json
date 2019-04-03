@@ -1,0 +1,35 @@
+{
+  "name": "gosalaries-api",
+  "description": "API service for the SWE20001 project (gosalaries-api) (by chehanr).",
+  "image": "heroku/python",
+  "repository": "...",
+  "keywords": ["python", "django"],
+  "addons": ["heroku-postgresql"],
+  "env": {
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "2"
+    },
+    "DJANGO_SECRET_KEY": {
+      "description": "The secret key for the Django application.",
+      "generator": "secret"
+    },
+    "DJANGO_DJANGO_DEBUG": {
+      "value": "True"
+    },
+    "ALLOWED_HOSTS": {},
+    "NORECAPTCHA_TESTING": {
+      "value": "True"
+    },
+    "NORECAPTCHA_SITE_KEY": {},
+    "NORECAPTCHA_SECRET_KEY": {}
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python manage.py collectstatic --noinput",
+        "test": "python manage.py test"
+      }
+    }
+  }
+}

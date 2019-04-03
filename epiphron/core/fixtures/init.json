@@ -1,0 +1,81 @@
+[{
+    "model": "core.product",
+    "pk": 1,
+    "fields": {
+        "seller": null,
+        "category": null,
+        "name": "Apple",
+        "description": null,
+        "extra_data": {
+            "example": null
+        },
+        "availability": true,
+        "url": "https://apple.com",
+        "image_url": null,
+        "added_datetime": "2019-03-28T10:57:48.224373"
+    }
+}, {
+    "model": "core.product",
+    "pk": 2,
+    "fields": {
+        "seller": null,
+        "category": null,
+        "name": "Banana",
+        "description": null,
+        "extra_data": {
+            "example": null
+        },
+        "availability": true,
+        "url": "https://banana.com",
+        "image_url": null,
+        "added_datetime": "2019-03-28T10:57:48.224373"
+    }
+}, {
+    "model": "core.product",
+    "pk": 3,
+    "fields": {
+        "seller": null,
+        "category": null,
+        "name": "Grapes",
+        "description": null,
+        "extra_data": {
+            "example": null
+        },
+        "availability": false,
+        "url": "https://grapes.com",
+        "image_url": null,
+        "added_datetime": "2019-03-28T10:57:48.224373"
+    }
+}, {
+    "model": "core.product",
+    "pk": 4,
+    "fields": {
+        "seller": null,
+        "category": null,
+        "name": "Apple",
+        "description": null,
+        "extra_data": {
+            "example": null
+        },
+        "availability": true,
+        "url": "https://apple.com",
+        "image_url": null,
+        "added_datetime": "2019-03-28T10:57:48.224373"
+    }
+}, {
+    "model": "core.product",
+    "pk": 5,
+    "fields": {
+        "seller": null,
+        "category": null,
+        "name": "Grapes",
+        "description": null,
+        "extra_data": {
+            "example": null
+        },
+        "availability": true,
+        "url": "https://grapes.com",
+        "image_url": null,
+        "added_datetime": "2019-03-28T10:57:48.224373"
+    }
+}]
