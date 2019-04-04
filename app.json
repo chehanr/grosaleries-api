@@ -1,6 +1,6 @@
 {
-  "name": "gosalaries-api",
-  "description": "API service for the SWE20001 project (gosalaries-api) (by chehanr).",
+  "name": "GroSaleries-api",
+  "description": "API service for the SWE20001 project (GroSaleries) (by chehanr).",
   "image": "heroku/python",
   "repository": "...",
   "keywords": ["python", "django"],

@@ -1,6 +1,6 @@
-# gosalaries-api
+# GroSaleries-api
 
-API service for the SWE20001 project (gosalaries-api).
+API service for the SWE20001 project (GroSaleries).
 
 ## Requirements
 
