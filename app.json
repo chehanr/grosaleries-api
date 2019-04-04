@@ -2,7 +2,7 @@
   "name": "GroSaleries-api",
   "description": "API service for the SWE20001 project (GroSaleries) (by chehanr).",
   "image": "heroku/python",
-  "repository": "...",
+  "repository": "https://github.com/nguyenhailong253/back_end",
   "keywords": ["python", "django"],
   "addons": ["heroku-postgresql"],
   "env": {
