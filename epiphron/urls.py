@@ -29,6 +29,10 @@ router = routers.DefaultRouter()
 api_urlpatterns = [
     path('api/', include(router.urls)),
     # path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/sellers/', api_views.SellerList.as_view()),
+    path('api/sellers/item/<int:pk>/', api_views.SellerDetail.as_view()),
+    path('api/categories/', api_views.CategoryList.as_view()),
+    path('api/categories/item/<int:pk>/', api_views.CategoryDetail.as_view()),
     path('api/products/', api_views.ProductList.as_view()),
     path('api/products/item/<int:pk>/', api_views.ProductDetail.as_view()),
 ]

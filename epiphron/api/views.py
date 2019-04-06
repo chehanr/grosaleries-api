@@ -7,8 +7,64 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from ..core.models import Product
-from .serializers import ProductDetailSerializer, ProductSerializer
+from ..core.models import Category, Product, Seller
+from .serializers import (CategoryDetailSerializer, CategorySerializer,
+                          ProductDetailSerializer, ProductSerializer,
+                          SellerDetailSerializer, SellerSerializer)
+
+
+class SellerList(generics.ListAPIView):
+    """
+    List all sellers.
+    """
+
+    queryset = Seller.objects.all()
+    serializer_class = SellerSerializer
+    ordering = ('pk',)
+
+
+class SellerDetail(APIView):
+    """
+    Retrieve a single seller instance.
+    """
+
+    def get_object(self, pk):
+        try:
+            return Seller.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        seller = self.get_object(pk)
+        serializer = SellerDetailSerializer(seller)
+        return Response(serializer.data)
+
+
+class CategoryList(generics.ListAPIView):
+    """
+    List all categories.
+    """
+
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    ordering = ('pk',)
+
+
+class CategoryDetail(APIView):
+    """
+    Retrieve a single category instance.
+    """
+
+    def get_object(self, pk):
+        try:
+            return Category.objects.get(pk=pk)
+        except Product.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        category = self.get_object(pk)
+        serializer = CategoryDetailSerializer(category)
+        return Response(serializer.data)
 
 
 class ProductList(generics.ListAPIView):
