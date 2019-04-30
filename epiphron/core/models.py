@@ -54,7 +54,7 @@ class Product(models.Model):
     name = models.CharField(max_length=128)
     price = models.CharField(max_length=128, blank=True, null=True)
     description = models.CharField(max_length=512, blank=True, null=True)
-    quantity = models.CharField(max_length=64, blank=True, null=True)
+    # quantity = models.CharField(max_length=64, blank=True, null=True)
     extra_data = JSONField(blank=True, null=True)
     availability = models.BooleanField(default=True)
     url = models.URLField(blank=True, null=True)
