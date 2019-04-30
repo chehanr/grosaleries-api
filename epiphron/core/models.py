@@ -52,7 +52,7 @@ class Product(models.Model):
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, blank=True, null=True)
     name = models.CharField(max_length=128)
-    # price = models.FloatField()
+    price = models.CharField(max_length=128, blank=True, null=True)
     description = models.CharField(max_length=512, blank=True, null=True)
     quantity = models.CharField(max_length=64, blank=True, null=True)
     extra_data = JSONField(blank=True, null=True)
@@ -70,19 +70,19 @@ class Product(models.Model):
         return self.name
 
 
-class Price(models.Model):
-    """
-    Price model.
-    """
+# class Price(models.Model):
+#     """
+#     Price model.
+#     """
 
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    added_datetime = models.DateTimeField(auto_now_add=True)
-    recorded_datetime = models.DateField()
-    price = models.FloatField()
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+#     added_datetime = models.DateTimeField(auto_now_add=True)
+#     recorded_datetime = models.DateField()
+#     price = models.FloatField()
 
-    class Meta:
-        verbose_name = _("Price")
-        verbose_name_plural = _("Prices")
+#     class Meta:
+#         verbose_name = _("Price")
+#         verbose_name_plural = _("Prices")
 
-    def __str__(self):
-        return '{0} - {1}'.format(self.product.name, self.price)
+#     def __str__(self):
+#         return '{0} - {1}'.format(self.product.name, self.price)
