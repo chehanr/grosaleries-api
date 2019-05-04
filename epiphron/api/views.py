@@ -84,13 +84,16 @@ class ProductList(generics.ListAPIView):
         qp_availability = self.request.query_params.get('availability')
         qp_category = self.request.query_params.get('category')
         qp_price = self.request.query_params.get('price')
-        qp_seller = self.request.query_params.get('category')
+        qp_seller = self.request.query_params.get('seller')
 
         if qp_availability:
             queryset = queryset.filter(availability=qp_availability)
-        # elif qp_price:
-        #     queryset = queryset.filter(workspace__airline_id=airline)
-
+        if qp_seller:
+            if qp_seller.isdigit():
+                queryset = queryset.filter(seller=qp_seller)
+            else:
+                queryset = queryset.filter(seller__name__iexact=qp_seller)
+                
         return queryset
 
 
