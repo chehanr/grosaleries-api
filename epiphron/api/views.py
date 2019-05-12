@@ -76,7 +76,7 @@ class ProductList(generics.ListAPIView):
     serializer_class = ProductSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter,)
     search_fields = ('name',)
-    ordering_fields = ('pk', 'availability', 'added_datetime',)
+    ordering_fields = ('pk', 'availability', 'added_datetime', 'price',)
     ordering = ('pk',)
 
     def get_queryset(self):
